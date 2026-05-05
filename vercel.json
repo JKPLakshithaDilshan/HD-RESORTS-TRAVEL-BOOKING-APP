@@ -1,0 +1,16 @@
+{
+  "buildCommand": "cd mobile && npm install && npm run build",
+  "outputDirectory": "mobile/dist",
+  "framework": "expo",
+  "env": [
+    "REACT_APP_API_URL"
+  ],
+  "envPrefix": "REACT_APP_",
+  "regions": ["iad1"],
+  "functions": {
+    "api/**/*.js": {
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  }
+}

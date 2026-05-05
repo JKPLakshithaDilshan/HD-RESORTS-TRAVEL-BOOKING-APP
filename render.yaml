@@ -1,0 +1,53 @@
+services:
+  - type: web
+    name: hd-resorts-api
+    env: node
+    plan: free
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: MONGODB_URI
+        scope: run
+        value: ${MONGODB_URI}
+      - key: JWT_SECRET
+        scope: run
+        value: ${JWT_SECRET}
+      - key: PORT
+        scope: run
+        value: 5000
+      - key: NODE_ENV
+        scope: run
+        value: production
+      - key: GOOGLE_CLIENT_ID
+        scope: run
+        value: ${GOOGLE_CLIENT_ID}
+      - key: GOOGLE_CLIENT_SECRET
+        scope: run
+        value: ${GOOGLE_CLIENT_SECRET}
+      - key: CLOUDINARY_CLOUD_NAME
+        scope: run
+        value: ${CLOUDINARY_CLOUD_NAME}
+      - key: CLOUDINARY_API_KEY
+        scope: run
+        value: ${CLOUDINARY_API_KEY}
+      - key: CLOUDINARY_API_SECRET
+        scope: run
+        value: ${CLOUDINARY_API_SECRET}
+      - key: EMAIL_HOST
+        scope: run
+        value: ${EMAIL_HOST}
+      - key: EMAIL_PORT
+        scope: run
+        value: ${EMAIL_PORT}
+      - key: EMAIL_USER
+        scope: run
+        value: ${EMAIL_USER}
+      - key: EMAIL_PASSWORD
+        scope: run
+        value: ${EMAIL_PASSWORD}
+      - key: EMAIL_FROM
+        scope: run
+        value: ${EMAIL_FROM}
+      - key: FRONTEND_URL_PRODUCTION
+        scope: run
+        value: ${FRONTEND_URL_PRODUCTION}

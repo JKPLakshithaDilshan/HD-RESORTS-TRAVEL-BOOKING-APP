@@ -1,0 +1,95 @@
+# Environment Variables
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# Node Modules
+node_modules/
+backend/node_modules/
+mobile/node_modules/
+*/node_modules
+
+# Build Outputs
+dist/
+build/
+.next/
+out/
+.expo/
+.expo-shared/
+backend/dist/
+mobile/dist/
+
+# Dependencies Lock Files (optional - uncomment if you want to commit lock files)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE & Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.sublime-workspace
+.history/
+
+# Local Upload Files
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/src/uploads/*
+!backend/src/uploads/.gitkeep
+
+# Cache Directories
+.cache/
+.parcel-cache/
+.eslintcache
+
+# Temporary Files
+tmp/
+temp/
+*.bak
+*.tmp
+
+# Mobile App Specific
+mobile/.expo-shared/
+mobile/dist/
+mobile/.next/
+mobile/.eas/
+
+# Backend Specific
+backend/public/uploads/
+backend/tests/coverage/
+
+# Vercel
+.vercel
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+.env.test
+.turbo
+dist
