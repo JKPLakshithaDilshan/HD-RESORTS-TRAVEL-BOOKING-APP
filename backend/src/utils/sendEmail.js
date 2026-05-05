@@ -9,8 +9,8 @@ const sendEmail = async (options) => {
     secure: false,       // STARTTLS (upgraded after connection)
     family: 4,           // Force IPv4 — Render blocks IPv6 outbound
     auth: {
-      user: process.env.SMTP_EMAIL,
-      pass: process.env.SMTP_PASSWORD,
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASSWORD,
     },
     tls: {
       rejectUnauthorized: false, // Allow self-signed certs if any
@@ -18,7 +18,7 @@ const sendEmail = async (options) => {
   });
 
   const message = {
-    from: `${process.env.FROM_NAME} <${process.env.SMTP_EMAIL}>`,
+    from: `${process.env.EMAIL_FROM} <${process.env.EMAIL_USER}>`,
     to: options.email,
     subject: options.subject,
     text: options.message,

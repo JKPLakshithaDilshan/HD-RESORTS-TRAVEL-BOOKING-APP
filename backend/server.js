@@ -37,7 +37,13 @@ connectDB();
 // 🔧 MIDDLEWARE
 // ═══════════════════════════════════════════════════════════════════════════════
 
-app.use(cors());
+const corsOptions = {
+  origin: process.env.NODE_ENV === 'production' 
+    ? [process.env.FRONTEND_URL_PRODUCTION, /\.vercel\.app$/] 
+    : '*',
+  credentials: true,
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Serve uploaded files statically (multer standard)
